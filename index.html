@@ -1,28 +1,56 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="content-type" content="text/html;">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="robots" content="index, follow">
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="description" content="" />
-    <meta name="author" content="talPor Solutions" />
+    <meta name="description" content="Tarea realizada para el proceso de admision de DevLabs" />
+    <meta name="author" content="leofaster" />
 
+
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen"/>
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
     <title>DevLabs USB - Tarea 1</title>
-
-    <link href="//fonts.googleapis.com/css?family=Ubuntu|Open+Sans" rel="stylesheet" type="text/css">
-    <link type="text/css" rel="stylesheet" media="all" href="screen.css" />
   </head>
+
   <body>
-    <a id="github-ribbon" href="https://github.com/devlabs-usb/tarea1-git"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>
+    <a id="forkme_banner" href="https://github.com/leofaster/branch">View on GitHub</a>
+    <div class="shell">
 
-    <header>
-      <h1>DevLabs__USB</h1>
-      <h2>Tarea 1</h2>
-    </header>
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>DevLabs USB</h1>
+            <h2>Tarea 1</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
 
-    <section id="explanation">
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/leofaster/branch/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/leofaster/branch/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+      <h2>Explicación</h2>
+        <section id="explanation">
       <div>
         <p>
           Esta primera tarea consiste en familiarizarse un poco con
@@ -74,26 +102,18 @@
         </ol>
       </div>
     </section>
-
-    <!-- This comment is exclusively designed to create a merge conflict
-
-         DEVLABS--USB
-         VERSION 1.01
-      -->
-
-    <section id="questions">
-      <article>
-        <h3>Preguntas</h3>
-      </article>
+    
+     <h2>Preguntas</h2>
+    <section id="explanation">
+     
+      
       <article id="q1">
         <h3>
           1. Colocar acá el hash del commit en el que resolviste el merge
           conflict causado por el paso 4.
         </h3>
-        <div class="answer">
-          Colocar acá el hash. Nota: El hash sería algo como: 6a7d638884834dd5b835a165c65f0bc595960659<br />
-          o mejor aún, podrían apuntarlo directamente a github:
-          <a href="https://github.com/leofaster/tarea1-git/commit/6a7d638884834dd5b835a165c65f0bc595960659" target="blank">6a7d638884834dd5b835a165c65f0bc595960659</a>
+        <div class="highlight">
+         <center><a href="https://github.com/leofaster/tarea1-git/commit/6a7d638884834dd5b835a165c65f0bc595960659" target="blank">6a7d638884834dd5b835a165c65f0bc595960659</a></center>
         </div>
       </article>
       <article id="q2">
@@ -107,11 +127,17 @@
           aparece repetida pues la palabra “ADD” contiene la
           subsecuencia “DD”.
         </h3>
-        <div class="answer">
-          Coloca tu respuesta aquí.<br/>
-          Opcionalmente, puedes poner los archivos con la solución
-          en tu repositorio y poner la dirección del archivo acá.
-          Como por ejemplo: /Código/Scrabble.py
+        <div >
+        <div class="highlightCode" style="border-style:dashed; border-width:1px;" >
+        <br/><code>&nbsp;&nbsp;main = do<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  archivo <- getArgs<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; contenido <-  readFile $ head archivo<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print $ filter (\x -> not $ isInfixOf ([x,x]) contenido) ['A'..'Z']<br/><br/>
+         </code>
+        <div >
+        </div >
+        </div>
+        <a href="https://github.com/leofaster/tarea1-git/blob/gh-pages/codigo/Scrabble.hs" target="_blank">/Código/Scrabble.hs</a>
         </div>
       </article>
       <article id="q3">
@@ -120,8 +146,34 @@
           Git: definir 'working directory', 'index', 'local repo', 'remote
           repo', 'dirty working tree' y 'merge conflict'.
         </h3>
-        <div class="answer">
-          Coloca tus respuestas aquí.
+        <div class="highlightCode">
+         <table>
+	<tr>
+		<td><strong>Working directory</strong></td>
+		<td>Directorio donde se encuentra ubicado nuestros archivos y el repositorio GIT</td>
+	</tr>
+	<tr>
+		<td><strong>Index</strong></td>
+		<td>Son los archivos que ya se les hizo add. Antes de hacer el commit</td>
+	</tr>
+	<tr>
+		<td><strong>Local repo</strong></td>
+		<td>Son los archivos que ya se les hizo el commit</td>
+	</tr>
+	<tr>
+		<td><strong>Remote repo</strong></td>
+		<td>Son los archivos que se encuentran en un servidor remoto. Esto ocurre despues de un git pull</td>
+	</tr>
+	<tr>
+		<td><strong>Dirty working tree</strong></td>
+		<td>Es cuando tienes cambios en el Working directory que no se han reportado al index</td>
+	</tr>
+	<tr>
+		<td><strong>Merge conflict</strong></td>
+		<td>Ocurre cuando el algoritmo que se encarga de unir dos branch no logra hacerlo de forma automatizada. </td>
+	</tr>
+</table>
+         
         </div>
       </article>
       <article id="q4">
@@ -133,7 +185,7 @@
           commit, lo agrega al repositorio actual y finalmente vacía
           el indice.
         </h3>
-        <div class="answer">
+        <div class="highlight">
           <table>
             <thead>
               <tr>
@@ -151,42 +203,44 @@
             <tbody>
               <tr>
                 <th scope="row">working dir</th>
+                <center>
+                <td><center>R</center></td>
                 <td></td>
+                <td><center>R</center></td>
                 <td></td>
+                <td><center>W</center></td>
                 <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td><center>W</center></td>
+                </center>
               </tr>
               <tr>
                 <th scope="row">index</th>
+                <td><center>R</center></td>
+                <td></td>
+                <td><center>W</center></td>
+                <td><center>R/W</center></td>
                 <td></td>
                 <td></td>
-                <td></td>
-                <td>R/W</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td><center>R</center></td>
               </tr>
               <tr>
                 <th scope="row">local repo</th>
                 <td></td>
+                <td><center>W</center></td>
                 <td></td>
+                <td><center>W</center></td>
                 <td></td>
-                <td>W</td>
-                <td></td>
-                <td></td>
+                <td><center>R</center></td>
                 <td></td>
               </tr>
               <tr>
                 <th scope="row">remote repo</th>
                 <td></td>
+                <td><center>R</center></td>
                 <td></td>
                 <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td><center>R</center></td>
+                <td><center>R/W</center></td>
                 <td></td>
               </tr>
             </tbody>
@@ -196,7 +250,7 @@
 
       <article id="q5">
         <h3>Rellenar la siguiente encuesta</h3>
-        <div class="answer not-technically-an-answer"><a href="https://docs.google.com/forms/d/1CzebM_8YQThM7LjjGou6VxixEalTwXZg_FDoYEHKdes/viewform" target="blank">https://docs.google.com/forms/d/1CzebM_8YQThM7LjjGou6VxixEalTwXZg_FDoYEHKdes/viewform</a>.</div>
+        <div class="answer not-technically-an-answer"><a href="https://docs.google.com/forms/d/1CzebM_8YQThM7LjjGou6VxixEalTwXZg_FDoYEHKdes/viewform" target="blank">Encuesta</a>.</div>
       </article>
 
       <article id="q6">
@@ -215,17 +269,24 @@
       </article>
     </section>
 
-    <footer>
-      <p>Contacto: <a href="mailto:devlabs-usb@talpor.com">devlabs-usb@talpor.com</a></p>
-    </footer>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+    
+    </section>
 
-      ga('create', 'UA-45571408-1', 'devlabs-usb.github.io');
-      ga('send', 'pageview');
-    </script>
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/leofaster">leofaster</a> can be found on <a href="https://github.com/leofaster/branch">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
+
+    </div>
+
+    
   </body>
 </html>
